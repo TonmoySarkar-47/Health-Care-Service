@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+}
+
+header h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: normal;
+}
+
+header button {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .profile-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    /*Shifts the button vertically by 50% of its own height upward (negative 50%). */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+}
+/* Hover Effect */
+header .profile-btn:hover {
+    transform: translateY(-50%) scale(1.1); /* Makes the button grow slightly */
+}
+
+main {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.welcome {
+    position: absolute;
+    top: 4%;
+    left: 30px;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+}
+
+/* Profile Modal Styling - Positioned Top Right */
+#profileModal {
+    display: none;
+    position: fixed;
+    top: 80px;
+    /* Adjust top to align below the header */
+    right: 20px;
+    /* Align to the top-right corner */
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#profileModal h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#profileModal p {
+    margin: 10px 0;
+}
+
+#profileModal button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Update Profile Modal - Centered */
+#updateProfileModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#updateProfileModal h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#updateProfileModal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#updateProfileModal button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.scrollable {
+    max-height: 550px;
+    max-width: auto;
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}

@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #f8f8f8;
+    color: black;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header .profile-btn {
+    position: absolute;
+    top: 4%;
+    right: 20px;
+    transform: translateY(-50%);
+    /*Shifts the button vertically by 50% of its own height upward (negative 50%). */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+}
+/* Hover Effect */
+header .profile-btn:hover {
+    transform: translateY(-50%) scale(1.1); /* Makes the button grow slightly */
+}
+
+main {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.welcome {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 998;
+    pointer-events: auto;/* Block interaction with background elements */
+}
+/* Profile Modal Styling - Positioned Top Right */
+#profileModal {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 999;
+}
+
+#profileModal h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#profileModal p {
+    margin: 10px 0;
+}
+
+#profileModal button {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Update Profile Modal - Centered */
+#updateProfileModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(35, 34, 34, 0.27);
+    border-radius: 10px;
+    z-index: 999;
+}
+
+#updateProfileModal h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#updateProfileModal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#updateProfileModal button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.form-group button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+}
+/* Enhanced Transaction Table CSS */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border radius applies to the entire table */
+}
+
+.result-table th,
+.result-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.result-table th {
+    background-color: #0b7798ea; /* Cool green color for the header */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.result-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.result-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Subtle even-row color */
+}
+
+.result-table tr:nth-child(odd) {
+    background-color: #ffffff; /* Clear odd-row color */
+}
+
+.result-table tr:hover {
+    background-color: #d0f0faea; /* Light green hover effect */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.result-table td {
+    color: #333;
+    font-size: 14px;
+}
+
+/* Styling for the buttons container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Transaction History Button */
+#transactionHistoryBtn {
+    background-color: #04b42a;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#transactionHistoryBtn:hover {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group button {
+        font-size: 14px;
+    }
+
+    .logout-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .result-table {
+        font-size: 14px;
+    }
+
+    .result-table th, .result-table td {
+        padding: 10px;
+    }
+}

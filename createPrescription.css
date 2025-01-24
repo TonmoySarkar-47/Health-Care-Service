@@ -1,0 +1,244 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+/* Top Section */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-section h2 {
+    margin: 0;
+    color: #6a11cb;
+}
+
+.top-section .timestamp {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Patient Info Section */
+.patient-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.patient-info .info-item {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.patient-info .info-item p {
+    margin: 0;
+    font-weight: bold;
+    color: #6a11cb;
+    /* You can change this color to match the theme */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .patient-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .patient-info .info-item {
+        flex: none;
+        /* Make each info-item take full width on smaller screens */
+        text-align: left;
+        padding: 15px;
+    }
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background: #6a11cb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #2575fc;
+    transform: scale(1.05);
+}
+
+/* Add space between BP and Pulse Rate */
+.bp-pulse-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bpcolumn {
+    margin-right: 50px;
+}
+
+/* Align Drugs, Strength, Quantity, Frequency, and Remarks in a Row */
+.drugs-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.drugs-row label {
+    flex: 0 0 100px;
+}
+
+.drugs-row input[type="text"],
+.drugs-row select {
+    flex: 1;
+    min-width: 120px;
+}
+
+.drugs-row button.add-button {
+    flex-shrink: 0;
+}
+
+/* Table Styles */
+.box {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th {
+    background: #6a11cb;
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background: rgba(106, 17, 203, 0.1);
+}
+
+/* Advice textarea */
+textarea[name="advice"] {
+    height: 80px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: #2575fc;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background: #6a11cb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bp-pulse-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .drugs-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+    }
+
+    .patient-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

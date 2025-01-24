@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.signup-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Role selection styling */
+#role-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#role {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#role option {
+    padding: 10px;
+}
+
+/* Hidden fields for different roles */
+#patient-fields,
+#doctor-fields,
+#pharmacy-fields {
+    display: none;  /* Hide the forms initially */
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Input and Button Styling */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Back to Login Button */
+.back-to-login-form {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.back-to-login {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-to-login:hover {
+    background-color: #e53935;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Show specific role form when selected */
+#role:focus + #patient-fields,
+#role:focus + #doctor-fields,
+#role:focus + #pharmacy-fields {
+    display: block;
+}
+
+/* Additional form appearance styling for smoother visibility changes */
+#role-form select:focus + #patient-fields {
+    display: block;
+}
+
+#role-form select:focus + #doctor-fields {
+    display: block;
+}
+
+#role-form select:focus + #pharmacy-fields {
+    display: block;
+}
